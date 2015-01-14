@@ -1,0 +1,234 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    /*max-width: 280px;*/
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.small-font{
+    font-size: 14px;
+}
+
+.someSpace{
+    padding-top: 30px;
+}
+
+.ui-menu .ui-menu-item{
+    list-style: none;
+    background: #ffffff;
+    width: 400px;
+    }
+
+.featurette{
+    padding-top: 120px;
+    overflow: hidden;
+}
+
+.featurette-heading {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.bleu {
+    color: #004B93;
+}
+
+.bleu2 {
+    color: #0995A6;
+}
+
+.bleu3 {
+    color: #DE7600;
+}
+
+.featurette-divider{
+    margin: 80px 0;
+}
+
+.featurette-image {
+    margin-top: -120px;
+}
+
+.featurette-divider {
+    margin: 80px 0
+}
+
+.jumbotron{
+    background-color: #DDEEF6;
+}
+
+.stockprice{
+        font-size: 20pt;
+}
+
+.point-percent{
+    font-size: 16pt;
+    color: #008B8B;
+}
+
+#quote_sum_data{
+    margin-top: 30px;
+}
+
+#someRoom{
+    margin: 0 10px 0 10px;
+}
+
+#stockresults{
+    border: 2px solid #eee;
+    padding-bottom:15px;
+}
+
+/* Make featurette work better on phones */
+ @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+ @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+@media (max-width: 767px) {
+
+    .navbar-inner {
+        margin: -20px;
+    }
+
+    .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+        .carousel .container {
+        }
+
+        .carousel .item {
+            height: 300px;
+        }
+
+        .carousel img {
+            height: 300px;
+        }
+
+    .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+    }
+
+        .carousel-caption h1 {
+            font-size: 30px;
+        }
+
+        .carousel-caption .lead,
+        .carousel-caption .btn {
+            font-size: 18px;
+        }
+
+    .marketing .col-md-4 + .col-md-4 {
+        margin-top: 40px;
+    }
+
+    .featurette-heading {
+        font-size: 30px;
+    }
+
+    .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+    }    
+}

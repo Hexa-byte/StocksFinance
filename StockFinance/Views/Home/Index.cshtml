@@ -1,0 +1,125 @@
+﻿@{
+    ViewBag.Title = "Stocks and Finance";
+}
+
+
+
+    <div class="jumbotron">
+        <h1>Stock Quote Checker</h1>
+        <p class="lead">A great way to check your stocks...with the power of angular.js and .Net MVC</p>
+        @*<p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>*@
+        <form role="search" class="form-horizontal">
+            <div class="form-group add-on">
+                <div class="col-md-12  input-group-lg">
+                    <input type="search" id="searchInput" name="inputSearch" onsubmit="runSearchAPI()" class="form-control input-lg" placeholder="Symbol or name" />
+                </div>
+            </div>
+            <button class="btn btn-primary btn-lg col-sm-offset-5" id="searchButton" type="submit" ng-click="runSearchAPI()">Search</button>
+        </form>
+    </div>
+
+    <div class="container" id="stockresults">
+    <div>
+        <h2>Name: {{ apiCall.query.results.quote.Name }}</h2>
+        <p>Last Trade Time: {{ apiCall.query.results.quote.LastTradeTime }}</p>
+        <h3>Symbol: {{apiCall.query.results.quote.symbol}} <span id="someRoom"></span> <span class="stockprice"><b>{{ apiCall.query.results.quote.LastTradePriceOnly }} <span class="point-percent"> {{apiCall.query.results.quote.ChangeRealtime}} ({{ apiCall.query.results.quote.ChangeinPercent }})</span></b></span></h3>
+        <div id="quote_sum_data">
+            <table id="table" class="col-md-6">
+                <tbody>
+                    <tr>
+                        <td><b>Open:</b> {{ apiCall.query.results.quote.Open }}</td>
+                        <td><b>Previous Close:</b> {{ apiCall.query.results.quote.PreviousClose }}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Bid:</b> {{ apiCall.query.results.quote.BidRealtime }}</td>
+                        <td><b>Ask:</b> {{ apiCall.query.results.quote.AskRealtime }}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Divident Pay Date:</b> {{ apiCall.query.results.quote.DividendPayDate }}</td>
+                        <td><b>Div & Yield:</b> {{ apiCall.query.results.quote.YearRange }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="table1" class="col-md-6">
+                <tbody>
+                    <tr>
+                        <td><b>DaysRange:</b> {{ apiCall.query.results.quote.DaysRange }}</td>
+                        <td><b>Years Range:</b> {{ apiCall.query.results.quote.YearRange }}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Volume:</b> {{ apiCall.query.results.quote.Volume }}</td>
+                        <td><b>Avg Volume:</b> {{ apiCall.query.results.quote.AverageDailyVolume }}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Market Cap:</b> {{ apiCall.query.results.quote.MarketCapitalization }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="col-md-12">
+            <h2>How to use it? <span class="small-font">And to see what browsers are supported</span></h2>
+            <p>
+                Click the button to find out!
+            </p>
+            <p><a class="btn btn-success scroll" href="#browserDiv">Lets GO!</a></p>
+        </div>
+  
+        <hr class="featurette-divider" id="browserDiv">
+    </div>
+
+    <div class="container marketing">
+
+        <!-- Three columns below main search bar -->
+        <!-- Button links take you to following browser divs below  -->
+        <div class="row">
+            <div class="col-md-4">
+                <img src="~/Content/img/1392157123_Browser_A.png" alt="chrome browser" />
+                <h2>Chrome</h2>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                <p><a class="btn btn-primary" href="#browserChrome">See Chrome »</a></p>
+            </div><!-- /.col-md-4 -->
+            <div class="col-md-4">
+                <img src="~/Content/img/1392157125_Browser_D.png" alt="explorer browser" />
+                <h2>IE10+</h2>
+                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                <p><a class="btn btn-primary" href="#browserIE">See IE10 »</a></p>
+            </div><!-- /.col-md-4 -->
+            <div class="col-md-4">
+                <img src="~/Content/img/1392157128_Browser_B.png" alt="firefox browser" />
+                <h2>Firefox</h2>
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                <p><a class="btn btn-primary" href="#browserFirefox">See Firefox »</a></p>
+            </div><!-- /.col-md-4 -->
+        </div><!-- /.row -->
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider" id="browserChrome">
+
+        <div class="featurette">
+            <img class="featurette-image pull-right img-responsive" src="~/Content/img/browser-icon-chrome.png" />
+            <h2 class="featurette-heading">First featurette headling. <span class="bleu2">It'll blow your mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+
+        <hr class="featurette-divider" id="browserIE">
+
+        <div class="featurette">
+            <img class="featurette-image pull-left img-responsive" src="~/Content/img/browser-icon-internet-explorer_shadow.png" />
+            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="bleu">See for yourself.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+
+        <hr class="featurette-divider" id="browserFirefox">
+
+        <div class="featurette">
+            <img class="featurette-image pull-right img-responsive" src="~/Content/img/browser-icon-firefox.png" />
+            <h2 class="featurette-heading">And lastly, this one. <span class="bleu3">Checkmate.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+
+        <!-- /END THE FEATURETTES -->
+    </div>
