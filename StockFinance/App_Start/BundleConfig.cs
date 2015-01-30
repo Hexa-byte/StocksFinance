@@ -26,7 +26,8 @@ namespace StockFinance
                       "~/Content/jquery-ui-{version}.custom.css",
                       "~/Content/site.css"));
             bundles.Add(new ScriptBundle("~/customs").Include(
-                      "~/Models/customScripts.js"
+                      "~/Models/customScripts.js",
+                      "~/Models/AutocorrectData.js"
                 ));
             bundles.Add(new ScriptBundle("~/Content/Angular").Include(
                       "~/Scripts/angular.min.js",
